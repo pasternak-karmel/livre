@@ -1,4 +1,5 @@
 "use client";
+import { fedaserver } from "@/actions/fedaServer";
 import { BuyKkiapay } from "@/components/buyArticle";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -21,9 +22,13 @@ export default function PaymentPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handlePayment = (e: any) => {
+  const handlePayment = async (e: any) => {
     e.preventDefault(); // Prevents page reload
-    BuyOpen(formData);
+    // BuyOpen(formData);
+    const url = await fedaserver(formData);
+    if (url) {
+      window.location.href = url;
+    }
   };
 
   return (

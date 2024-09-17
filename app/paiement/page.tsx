@@ -1,4 +1,5 @@
 "use client";
+import { fedaserver } from "@/actions/fedaServer";
 import { BuyKkiapay } from "@/components/buyArticle";
 import { useState } from "react";
 
@@ -16,9 +17,12 @@ export default function PaymentPage() {
     setUserInfo({ ...userInfo, [name]: value });
   };
 
-  const handlePayment = () => {
+  const handlePayment = async () => {
     console.log(userInfo);
-    BuyOpen(userInfo);
+    const url = await fedaserver(userInfo);
+    if (url) {
+      window.location.href = url;
+    }
   };
 
   return (
