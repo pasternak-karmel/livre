@@ -1,8 +1,6 @@
 "use client";
 import { fedaserver } from "@/actions/fedaServer";
 import { BuyKkiapay } from "@/components/buyArticle";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -23,8 +21,7 @@ export default function PaymentPage() {
   };
 
   const handlePayment = async (e: any) => {
-    e.preventDefault(); // Prevents page reload
-    // BuyOpen(formData);
+    e.preventDefault();
     const url = await fedaserver(formData);
     if (url) {
       window.location.href = url;
@@ -68,7 +65,6 @@ export default function PaymentPage() {
           </div>
         </div>
 
-        {/* Right Side: Form */}
         <div className="p-8 bg-gray-50 rounded-r-lg">
           <h3 className="text-lg font-semibold text-gray-800">Marchand:</h3>
           <form className="mt-6 space-y-4" onSubmit={handlePayment}>
@@ -101,7 +97,6 @@ export default function PaymentPage() {
               </div>
             </div>
 
-            {/* Email */}
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Email
@@ -131,7 +126,6 @@ export default function PaymentPage() {
                   <option value="">Sélectionner</option>
                   <option value="Benin">Bénin</option>
                   <option value="ivoire">Côte d&apos;ivoire</option>
-                  {/* Add more options as necessary */}
                 </select>
               </div>
               <div>
@@ -149,7 +143,6 @@ export default function PaymentPage() {
               </div>
             </div>
 
-            {/* Amount */}
             <div className="flex items-center justify-between">
               <div>
                 <label className="block text-sm font-medium text-gray-700">
@@ -166,7 +159,6 @@ export default function PaymentPage() {
               <span className="text-gray-700 font-bold">FCFA</span>
             </div>
 
-            {/* Submit Button */}
             <div className="flex justify-between items-center mt-8">
               <button
                 type="submit"
