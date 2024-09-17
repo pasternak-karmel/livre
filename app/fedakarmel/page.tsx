@@ -1,11 +1,9 @@
-// app/fedakarmel/page.tsx
-
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function FedaKarmelPage() {
+function FedaKarmelPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const transactionId = searchParams.get("id");
@@ -58,4 +56,12 @@ export default function FedaKarmelPage() {
   }
 
   return <div>Traitement de votre paiement...</div>;
+}
+
+export default function FedaKarmelPage() {
+  return (
+    <Suspense fallback={<div>Chargement des paramètres...</div>}>
+      <FedaKarmelPageContent />
+    </Suspense>
+  );
 }
