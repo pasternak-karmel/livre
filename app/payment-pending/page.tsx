@@ -15,7 +15,7 @@ const PaymentPending = () => {
         </h1>
         <p className="text-gray-600 mb-6">
           Votre transaction est en cours de traitement. Cela va prendre un
-          certain moment. S'il vous plait ne fermer pas la page ou raffraichire.
+          certain moment. S&apos;il vous plait ne fermer pas la page ou raffraichire.
         </p>
         <div className="space-x-4">
           <Button asChild variant="outline">

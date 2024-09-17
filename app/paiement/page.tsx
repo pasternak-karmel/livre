@@ -19,10 +19,10 @@ export default function PaymentPage() {
 
   const handlePayment = async () => {
     console.log(userInfo);
-    const url = await fedaserver(userInfo);
-    if (url) {
-      window.location.href = url;
-    }
+    // const url = await fedaserver(userInfo);
+    // if (url) {
+    //   window.location.href = url;
+    // }
   };
 
   return (

@@ -14,8 +14,8 @@ const PaymentFailed = () => {
           Paiement Echoué
         </h1>
         <p className="text-gray-600 mb-6">
-          Nous somme désolé, mais une erreur c'est produite lors de votre
-          paiement. S'il vous plait réessayer ou contacter le support si le
+          Nous somme désolé, mais une erreur c&apos;est produite lors de votre
+          paiement. S&apos;il vous plait réessayer ou contacter le support si le
           probleme persists
         </p>
         <div className="space-x-4">
