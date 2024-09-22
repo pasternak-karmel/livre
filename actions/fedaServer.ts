@@ -19,7 +19,7 @@ export const fedaserver = async (values: user) => {
   try {
     const transaction = await Transaction.create({
       description: "Confirmer votre achats",
-      amount: 5000,
+      amount: 3000,
       callback_url: `${domain}/fedakarmel`,
       currency: {
         iso: "XOF",

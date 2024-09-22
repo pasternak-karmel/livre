@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function PaymentPage() {
-  const { BuyOpen } = BuyKkiapay();
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -13,7 +12,7 @@ export default function PaymentPage() {
     email: "",
     country: "",
     phone: "",
-    amount: 5000,
+    amount: 3000,
   });
 
   const handleChange = (e: any) => {
@@ -34,7 +33,7 @@ export default function PaymentPage() {
         <div className="p-8">
           <div className="text-center">
             <Image
-              src="/ebook-cover.jpg"
+              src="/coverPack.jpeg"
               alt="Formation Publicité Facebook"
               width={150}
               height={150}
@@ -46,17 +45,33 @@ export default function PaymentPage() {
           </div>
           <div className="mt-6 text-gray-700">
             <p className="mb-4">
-              Formation Facebook Ads : Maîtrisez la publicité sur Facebook pour
-              propulser votre entreprise vers de nouveaux sommets ! 🚀
+              Pack Ultime 🚀
             </p>
             <p className="text-sm">
-              Dans cette formation dynamique, vous apprendrez :
+              Dans cette formation dynamique, vous apprendrez à :
             </p>
             <ul className="list-disc pl-6 text-sm">
-              <li>Les bases de la publicité sur Facebook</li>
-              <li>Les techniques avancées de ciblage</li>
-              <li>Conception d&apos;annonces percutantes</li>
-              <li>Optimisation des performances des campagnes</li>
+              <li>- Améliorer ta concentration 🧠 : Augmente ton efficacité au quotidien !</li>
+ <li>Maîtriser l&apos;anglais* 🇬🇧 : Deviens fluent de A à Z !</li>
+<li>Apprendre le mixage audio* 🎧 : Crée des sons professionnels en un rien de temps !</li> 
+<li>Automatiser tes tâches sur ChatGPT 🤖 : Optimise ton temps avec l&apos;IA la plus puissante !</li>
+<li>Importer des produits d&apos;Alibaba* 📦 : Domine le commerce Chine-Afrique </li> !
+<li>Réussir sur ComeUp 💼 : Deviens un pro du freelancing !</li> 
+<li>Créer des images avec Midjourney 🖼️ : Libère ta créativité avec l&apos;IA pour des visuels uniques !</li> 
+<li>Lancer un e-commerce qui cartonne 🛒 : Monte ton business en ligne rentable !</li> 
+<li>Créer une boutique Shopify de A 🏪 : Domine Shopify et vends tes produits !</li> 
+<li>Apprendre à programmer👨‍💻 : Deviens développeur en un clin d&apos;œil !</li> 
+<li>Maîtriser Excel VBA 📊 : Automatiser les tâches en un rien de temps !</li> 
+<li>Gérer les publicités Facebook 📣 : Génère des ventes grâce à la publicité ciblée ! </li> 
+<li>Réussir en affiliation💰 : Apprends à gagner de l&apos;argent avec l&apos;affiliation !</li> 
+<li>Monter des vidéos pro 🎥 : Maîtrise Adobe Premiere Pro et DaVinci Resolve pour des vidéos de qualité !</li> 
+<li>Créer un site WordPress🖥️ : Mets en ligne ton propre site en quelques clics !</li>
+<li>Investir en bourse📈 : Fais fructifier ton argent intelligemment !</li> 
+<li>Maîtriser Google Analytics 📊 : Analyse tes performances comme un pro !</li> 
+<li>Devenir expert en Print On Demand 👕 : Crée et vends tes designs sans stock !</li> 
+<li>Publicité sur les réseaux sociaux 📱 : Apprends à toucher une large audience !</li> 
+<li>Formation trading📉 : Maîtrise les marchés financiers pour générer des profits !</li> 
+<li> Formation mindset Barry 🧠 : Développe un mental d&apos;acier pour atteindre tes objectifs !</li>
             </ul>
             <p className="mt-4 text-sm">
               Que vous soyez un débutant ou un entrepreneur expérimenté, cette
@@ -66,7 +81,7 @@ export default function PaymentPage() {
         </div>
 
         <div className="p-8 bg-gray-50 rounded-r-lg">
-          <h3 className="text-lg font-semibold text-gray-800">Marchand:</h3>
+          <h3 className="text-lg font-semibold text-gray-800">CBC Shop</h3>
           <form className="mt-6 space-y-4" onSubmit={handlePayment}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
@@ -125,6 +140,7 @@ export default function PaymentPage() {
                 >
                   <option value="">Sélectionner</option>
                   <option value="Benin">Bénin</option>
+                  <option value="Cameroon">Cameroon</option>
                   <option value="ivoire">Côte d&apos;ivoire</option>
                 </select>
               </div>
@@ -162,9 +178,9 @@ export default function PaymentPage() {
             <div className="flex justify-between items-center mt-8">
               <button
                 type="submit"
-                className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+                className="px-36 py-2  bg-green-600 text-white rounded-md hover:bg-green-700"
               >
-                Continuer
+                Commander
               </button>
             </div>
           </form>
